@@ -1,0 +1,1179 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 6135
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F2 18 Tf
+20.6999999999999993 TL
+0.122 0.161 0.216 rg
+42.5196850393700814 799.3703149606299121 Td
+(Image_Capture.ipynb) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 765.3545669291338527 Td
+(from io import IncrementalNewlineDecoder) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 748.346692913385823 Td
+(from sentence_transformers import SentenceTransformer) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 731.3388188976377933 Td
+(from PIL import Image) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 714.3309448818897636 Td
+(import matplotlib.pyplot as plt) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 697.3230708661417339 Td
+(import numpy as np) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 680.3151968503937042 Td
+(%matplotlib inline) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 663.3073228346456744 Td
+(model = SentenceTransformer\("clip-ViT-B-32"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 606.614409448818833 Td
+(img1 = "/content/5.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 589.6065354330708033 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 572.5986614173227736 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 555.5907874015747439 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 538.5829133858267141 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 521.5750393700786844 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 504.5671653543306547 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 464.8821259842518998 Td
+(text_description = ["Two dogs in the snow",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 447.8742519685038701 Td
+(                    "A Cat on a table",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 430.8663779527558404 Td
+(                    "A Picture of london at night",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 413.8585039370078107 Td
+(                    "A dog sleeping on a cough",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 396.850629921259781 Td
+(                    "Two Cats fighting in the Garden",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 379.8427559055117513 Td
+(                    "This image features Black Panther, the Marvel) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 362.8348818897637216 Td
+(superhero, in a dramatic watercolor splash-art style",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 345.8270078740156919 Td
+(                   "This image is a close-up side profile of a) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 328.8191338582676053 Td
+(futuristic humanoid robot with a sleek white outer shell",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 311.8112598425195756 Td
+(                    "The robot has a human-like face with smooth) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 294.8033858267715459 Td
+(features and a calm expression",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 277.7955118110235162 Td
+(                    "This image shows a striking black wolf looking) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 260.7876377952754865 Td
+(directly at the viewer",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 243.7797637795274568 Td
+(                    "The peacock stands proudly, often associated with) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 226.7718897637794271 Td
+(royalty and divine elegance",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 209.7640157480313974 Td
+(                    "Known as the “Palace of Winds,” this Jaipur) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 192.7561417322833677 Td
+(landmark features a honeycomb façade of pink and red sandstone. ",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 175.748267716535338 Td
+(                    "A serene marble structure dedicated to Lord) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 158.7403937007873083 Td
+(Krishna, adorned with ornate carvings and domes" ,) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 141.7325196850392786 Td
+(                    "Its massive walls, watchtowers, and gateways tell) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 124.7246456692912489 Td
+(stories of valor and royal legacy, overlooking arid landscapes and) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 107.7167716535432191 Td
+(ancient towns.",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 90.7088976377951894 Td
+(                    "It beautifully combines the elegance of a) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 73.7010236220471597 Td
+(peacock, the grandeur of the Hawa Mahal",) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 56.69314960629913 Td
+(                     "Each element is placed in harmony, creating a) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 4347
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 799.3703149606299121 Td
+(vivid snapshot of India’s heritage.") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 714.3309448818897636 Td
+(                    ]) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 674.6459055118109518 Td
+(def display_image_and_compare\(image_path,text_description\):) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 640.6301574803148924 Td
+(  # loading image) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 623.6222834645668627 Td
+(  img = Image.open\(image_path\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 589.6065354330708033 Td
+(  # Encode Text and Image \(Converting both into Numbers\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 572.5986614173227736 Td
+(  text_emb = model.encode\(text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 555.5907874015747439 Td
+(  img_emb = model.encode\(img\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 521.5750393700786844 Td
+(  # Compute Similarity Score) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 504.5671653543306547 Td
+(  similarity_score = np.dot\(text_emb,img_emb.T\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 470.5514173228345953 Td
+(  # Find the Best Match) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 453.5435433070865656 Td
+(  best_match_index = np.argmax\(similarity_score\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 436.5356692913385359 Td
+(  best_match_desc = text_description[best_match_index]) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 402.5199212598424765 Td
+(  # Print the Final Output) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 385.5120472440944468 Td
+(  print\(f"\\nBest match for the image is = {best_match_desc} = with) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 368.5041732283464171 Td
+(score of = {similarity_score.max\(\)}"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 334.4884251968503008 Td
+(  # Display the Image) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 317.480551181102328 Td
+(  plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 300.4726771653542983 Td
+(  plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 283.4648031496062686 Td
+(  plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 266.4569291338582389 Td
+(  plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 249.4490551181102092 Td
+(  plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 209.7640157480313974 Td
+(display_image_and_compare\("/content/5.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 170.0789763779526993 Td
+(img1 = "/content/3.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 153.0711023622046696 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 136.0632283464566399 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 119.0553543307086102 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 102.0474803149605805 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 85.0396062992125508 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 68.0317322834645211 Td
+(plt.show\(\)) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 4677
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 799.3703149606299121 Td
+(display_image_and_compare\("/content/3.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 759.6852755905511003 Td
+(img1 = "/content/6.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 742.6774015748030706 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 725.6695275590550409 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 708.6616535433070112 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 691.6537795275589815 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 674.6459055118109518 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 657.6380314960629221 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 617.952992125984224 Td
+(display_image_and_compare\("/content/6.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 578.2679527559055259 Td
+(img1 = "/content/7.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 561.2600787401574962 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 544.2522047244094665 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 527.2443307086614368 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 510.2364566929133503 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 493.2285826771653205 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 476.2207086614172908 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 436.5356692913385359 Td
+(display_image_and_compare\("/content/7.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 396.850629921259781 Td
+(img1 = "/content/8.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 379.8427559055117513 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 362.8348818897637216 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 345.8270078740156919 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 328.8191338582676053 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 311.8112598425195756 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 294.8033858267715459 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 255.1183464566928478 Td
+(display_image_and_compare\("/content/8.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 215.4333070866141497 Td
+(img1 = "/content/9.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 198.4254330708660063 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 181.4175590551179766 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 164.4096850393699469 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 147.4018110236219172 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 130.3939370078738875 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 113.3860629921258578 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 73.7010236220471597 Td
+(display_image_and_compare\("/content/9.jpeg",text_description\)) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 3391
+>>
+stream
+0.5670000000000001 w
+0 G
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 799.3703149606299121 Td
+(img1 = "/content/10.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 782.3624409448818824 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 765.3545669291338527 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 748.346692913385823 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 731.3388188976377933 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 714.3309448818897636 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 697.3230708661417339 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 657.6380314960629221 Td
+(display_image_and_compare\("/content/10.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 617.952992125984224 Td
+(img1 = "/content/11.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 600.9451181102361943 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 583.9372440944881646 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 566.9293700787401349 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 549.9214960629921052 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 532.9136220472440755 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 515.9057480314959321 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 476.2207086614172908 Td
+(display_image_and_compare\("/content/11.jpeg",text_description\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 436.5356692913385359 Td
+(img1 = "/content/13.jpeg") Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 419.5277952755905062 Td
+(img1 = Image.open\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 402.5199212598424765 Td
+(plt.figure\(figsize = \(6,6\)\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 385.5120472440944468 Td
+(plt.imshow\(img1\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 368.5041732283464171 Td
+(plt.axis\("off"\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 351.4962992125983874 Td
+(plt.title\("Image For Similiarity Comparison",fontsize=14\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 334.4884251968503008 Td
+(plt.show\(\)) Tj
+ET
+BT
+/F5 12 Tf
+13.7999999999999989 TL
+0.31 0.275 0.898 rg
+42.5196850393700814 294.8033858267715459 Td
+(display_image_and_compare\("/content/13.jpeg",text_description\)) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R ]
+/Count 4
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 11 0 R
+/F2 12 0 R
+/F3 13 0 R
+/F4 14 0 R
+/F5 15 0 R
+/F6 16 0 R
+/F7 17 0 R
+/F8 18 0 R
+/F9 19 0 R
+/F10 20 0 R
+/F11 21 0 R
+/F12 22 0 R
+/F13 23 0 R
+/F14 24 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+25 0 obj
+<<
+/Producer (jsPDF 2.5.1)
+/CreationDate (D:20260630143521+05'30')
+>>
+endobj
+26 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000019323 00000 n 
+0000021163 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000006339 00000 n 
+0000006476 00000 n 
+0000010875 00000 n 
+0000011012 00000 n 
+0000015741 00000 n 
+0000015879 00000 n 
+0000019398 00000 n 
+0000019524 00000 n 
+0000019655 00000 n 
+0000019789 00000 n 
+0000019927 00000 n 
+0000020051 00000 n 
+0000020180 00000 n 
+0000020312 00000 n 
+0000020448 00000 n 
+0000020576 00000 n 
+0000020703 00000 n 
+0000020832 00000 n 
+0000020965 00000 n 
+0000021067 00000 n 
+0000021416 00000 n 
+0000021502 00000 n 
+trailer
+<<
+/Size 27
+/Root 26 0 R
+/Info 25 0 R
+/ID [ <9128E8DB20CC1F1702F1733201E462EC> <9128E8DB20CC1F1702F1733201E462EC> ]
+>>
+startxref
+21606
+%%EOF
